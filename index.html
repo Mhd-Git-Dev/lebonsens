@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bon Sens - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav-container-new">
+            <ul class="nav-menu-left">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="programme.html">Notre Programme</a></li>
+            </ul>
+            
+            <a href="index.html" class="logo-center">
+                <div class="logo-text">
+                    <span class="logo-city">Ferney-Voltaire</span>
+                    <span class="logo-slogan">Le Bon Sens</span>
+                </div>
+            </a>
+            
+            <ul class="nav-menu-right">
+                <li><a href="liste.html">La Liste</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Pre-Hero Section -->
+    <section class="pre-hero-section" style="background: #ffffff; padding: 3rem 2rem 1rem; text-align: center;">
+        <div class="container">
+            <p style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Christian Landreau</p>
+            <h1 style="color: var(--primary-color); font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">Ferney-Voltaire</h1>
+            <p style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 0;">Élections Municipales, 15-22 Mars 2026</p>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero" style="width: 100%; height: auto; position: relative; display: flex; justify-content: center; background: #ffffff; padding: 0; margin: 0;">
+        <div style="position: relative; width: 100%; max-width: 1600px;">
+            <img src="imgs/fond.jpeg" alt="Ferney-Voltaire" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;">
+            <div style="position: absolute; top: 55%; right: 12.5%; transform: translateY(-50%);">
+                <h1 style="color: var(--primary-color); font-size: 6rem; font-weight: bold; margin: 0; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); white-space: nowrap;">Le Bon Sens</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message-section" style="background: #ffffff; padding: 4rem 2rem;">
+        <div class="container">
+            <div class="message-content" style="max-width: 900px; margin: 0 auto; color: var(--primary-color); line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Chers habitants de Ferney-Voltaire,
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Chers électeurs,
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Faire preuve de bon sens avec vous, c'est commettre ensemble des actions concrètes et utiles que tout le monde attend. Les dossiers urgents ne manquent pas: propreté, sécurité, circulation, stationnement, mobilités réduites, transports publics, logements, santé, crèche, épanouissement des jeunes, accompagnement des aînés, améliorer l'activité économique par l'entreprenariat, parcs et espaces verts… Tel est le bon sens qui va guider la nouvelle majorité municipale.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    La liste « Le Bon Sens » que je prépare, réunira des femmes et des hommes que vous connaissez, que vous croisez tous les jours dans les rues, aux arrêts de bus et dans les trop rares commerces de proximité.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Ces femmes et ces hommes, jeunes et moins jeunes qui représentent l'ensemble de la population, habitent les différents quartiers de notre ville. Toutes et tous sont en capacité de maîtriser et de défendre les dossiers municipaux dans l'intérêt supérieur des habitants.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    A vous toutes et tous, respectueusement, 
+                </p>
+                <p style="font-size: 1.4rem; font-weight: bold; color: var(--primary-color);">
+                    Christian Landreau
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-members-section" style="background: #ffffff; padding: 4rem 2rem;">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--primary-color);">Présentation des premiers colistiers</h2>
+            
+            <div class="team-grid">
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">CL</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Christian Landreau</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member1')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member2')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member3')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member4')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member5')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member6')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member7')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member8')">Présentation</button>
+                    </div>
+                </div>
+
+                <div class="member-card" style="background: #ffffff; border: 2px solid var(--primary-color);">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <span class="initials">PN</span>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" style="color: var(--primary-color);">Prénom NOM</h3>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openMemberModal('member9')">Présentation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--primary-color);">Un échange commence par un mot</h2>
+            <p class="section-subtitle" style="color: var(--primary-color);">
+                Vous souhaitez poser une question, formuler une proposition ou simplement en savoir plus 
+                sur notre démarche ? N'hésitez pas à nous contacter.
+            </p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name" style="color: var(--primary-color);">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" style="color: var(--primary-color);">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" style="color: var(--primary-color);">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ferney-Voltaire</h3>
+                    <p class="footer-slogan">Le Bon Sens</p>
+                    <p>Notre Commune, Notre Avenir</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="programme.html">Notre Programme</a>
+                    <a href="liste.html">La Liste</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Le Bon Sens. Tous droits réservés. | <a href="politique-confidentialite.html" style="color: inherit; text-decoration: underline;">Politique de confidentialité (RGPD)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Member Details -->
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeMemberModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-photo">
+                    <img id="modalPhoto" src="" alt="Photo du candidat" style="display: none;">
+                    <div id="modalPhotoPlaceholder" class="photo-placeholder" style="width: 250px; height: 250px;">
+                        <span class="initials" id="modalInitials">PN</span>
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName" style="color: var(--primary-color);"></h2>
+                    <p id="modalRole" class="modal-role"></p>
+                    <div id="modalBio" class="modal-bio" style="color: var(--primary-color);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
