@@ -1,0 +1,241 @@
+═══════════════════════════════════════════════════════════════════
+   🚀 COMMANDES DE DÉPLOIEMENT - COPIER-COLLER
+═══════════════════════════════════════════════════════════════════
+
+📋 ÉTAPE 1 : CRÉER LE DÉPÔT SUR GITHUB
+───────────────────────────────────────────────────────────────────
+
+1. Ouvrez ce lien dans votre navigateur :
+   https://github.com/new
+
+2. Remplissez le formulaire :
+   - Repository name : lebonsens
+   - Description : Site web de la liste électorale Le Bon Sens - Ferney-Voltaire 2026
+   - Visibilité : PUBLIC (obligatoire pour GitHub Pages gratuit)
+   - NE COCHEZ RIEN D'AUTRE
+   
+3. Cliquez sur "Create repository"
+
+
+═══════════════════════════════════════════════════════════════════
+   💻 ÉTAPE 2 : POUSSER LE CODE (Copiez ces commandes)
+═══════════════════════════════════════════════════════════════════
+
+Copiez et collez ces 2 commandes dans votre terminal :
+
+git remote add origin https://github.com/Mhd-Git-Dev/lebonsens.git
+git push -u origin main
+
+⚠️ Note : Si vous avez un nom d'utilisateur GitHub différent,
+          remplacez "Mhd-Git-Dev" par votre nom d'utilisateur.
+
+
+═══════════════════════════════════════════════════════════════════
+   ⚙️ ÉTAPE 3 : ACTIVER GITHUB PAGES
+═══════════════════════════════════════════════════════════════════
+
+1. Allez sur votre dépôt :
+   https://github.com/Mhd-Git-Dev/lebonsens
+
+2. Cliquez sur "Settings" (⚙️)
+
+3. Dans le menu de gauche, cliquez sur "Pages"
+
+4. Sous "Source" :
+   - Branch : sélectionnez "main"
+   - Folder : sélectionnez "/ (root)"
+
+5. Cliquez sur "Save"
+
+6. ⏱️ Attendez 2-5 minutes
+
+
+═══════════════════════════════════════════════════════════════════
+   🌐 VOTRE SITE SERA DISPONIBLE ICI
+═══════════════════════════════════════════════════════════════════
+
+https://mhd-git-dev.github.io/lebonsens/
+
+(Remplacez "mhd-git-dev" par votre nom d'utilisateur si différent)
+
+
+═══════════════════════════════════════════════════════════════════
+   🔑 SI ON VOUS DEMANDE UN MOT DE PASSE
+═══════════════════════════════════════════════════════════════════
+
+GitHub n'accepte plus les mots de passe classiques.
+Vous devez créer un Personal Access Token :
+
+1. Allez sur : https://github.com/settings/tokens
+
+2. Cliquez sur "Generate new token" → "Generate new token (classic)"
+
+3. Remplissez :
+   - Note : Token pour lebonsens
+   - Expiration : 90 days (ou No expiration)
+   - Cochez : "repo" (toutes les sous-cases)
+
+4. Cliquez sur "Generate token"
+
+5. ⚠️ COPIEZ LE TOKEN IMMÉDIATEMENT (vous ne pourrez plus le voir)
+
+6. Utilisez ce token comme mot de passe quand Git vous le demande
+
+
+═══════════════════════════════════════════════════════════════════
+   📱 GÉNÉRER UN QR CODE GRATUIT
+═══════════════════════════════════════════════════════════════════
+
+🎯 MÉTHODE RAPIDE (URL directe) :
+
+Collez cette URL dans votre navigateur pour télécharger le QR code :
+
+https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=https://mhd-git-dev.github.io/lebonsens/
+
+(Remplacez l'URL par votre URL GitHub Pages)
+
+
+🎨 MÉTHODE PERSONNALISÉE (avec couleurs) :
+
+1. Allez sur : https://www.qr-code-generator.com
+
+2. Sélectionnez "URL"
+
+3. Entrez : https://mhd-git-dev.github.io/lebonsens/
+
+4. Personnalisez :
+   - Couleur : #2c5aa0 (bleu de votre charte)
+   - Logo : Ajoutez votre logo (optionnel)
+
+5. Téléchargez en haute résolution (PNG ou SVG)
+
+
+═══════════════════════════════════════════════════════════════════
+   🌐 CONFIGURER UN NOM DE DOMAINE (Optionnel)
+═══════════════════════════════════════════════════════════════════
+
+📋 ACHETER UN DOMAINE :
+
+Registrars recommandés :
+• OVH : https://www.ovh.com (~10-15€/an)
+• Gandi : https://www.gandi.net (~15-20€/an)
+• Namecheap : https://www.namecheap.com (~10-15€/an)
+
+Suggestions : lebonsens-ferney.fr, lebonsens-fv.fr, lebonsens2026.fr
+
+
+🔧 CONFIGURER LES DNS :
+
+Ajoutez ces enregistrements DNS chez votre registrar :
+
+Type    Nom     Valeur                      TTL
+────────────────────────────────────────────────────────────────
+A       @       185.199.108.153            3600
+A       @       185.199.109.153            3600
+A       @       185.199.110.153            3600
+A       @       185.199.111.153            3600
+CNAME   www     mhd-git-dev.github.io.     3600
+
+(Remplacez "mhd-git-dev" par votre nom d'utilisateur)
+
+
+🌐 LIER LE DOMAINE À GITHUB :
+
+1. Sur GitHub : Settings → Pages
+2. Dans "Custom domain", entrez : votre-domaine.fr
+3. Cliquez sur "Save"
+4. Attendez 24-48h pour la propagation DNS
+5. Cochez "Enforce HTTPS"
+
+6. Modifiez le fichier CNAME :
+   - Ouvrez le fichier CNAME
+   - Remplacez le contenu par : votre-domaine.fr
+   - Exécutez :
+
+git add CNAME
+git commit -m "Add custom domain"
+git push
+
+
+═══════════════════════════════════════════════════════════════════
+   🔄 METTRE À JOUR LE SITE
+═══════════════════════════════════════════════════════════════════
+
+Après avoir modifié des fichiers, exécutez :
+
+git add .
+git commit -m "Description de vos modifications"
+git push
+
+Le site sera automatiquement mis à jour en 1-2 minutes !
+
+
+═══════════════════════════════════════════════════════════════════
+   ✅ VÉRIFICATIONS
+═══════════════════════════════════════════════════════════════════
+
+Après le déploiement, vérifiez :
+
+☐ Le site s'affiche correctement
+☐ Toutes les pages sont accessibles (Accueil, Programme, Liste, Contact)
+☐ Les images s'affichent
+☐ Le formulaire de contact fonctionne
+☐ Le site est responsive (testez sur mobile)
+☐ Le QR code fonctionne (scannez-le avec votre smartphone)
+
+
+═══════════════════════════════════════════════════════════════════
+   📚 DOCUMENTATION COMPLÈTE
+═══════════════════════════════════════════════════════════════════
+
+Pour plus de détails, consultez :
+
+• DEPLOIEMENT_RAPIDE.txt - Guide pas à pas détaillé
+• GUIDE_DEPLOIEMENT.md - Guide complet avec toutes les options
+• QRCODE_GENERATION.md - Guide complet pour les QR codes
+• PERSONNALISATION.md - Pour modifier le contenu du site
+• README.md - Documentation du projet
+
+
+═══════════════════════════════════════════════════════════════════
+   🆘 PROBLÈMES COURANTS
+═══════════════════════════════════════════════════════════════════
+
+❌ "fatal: remote origin already exists"
+   → Exécutez : git remote remove origin
+   → Puis recommencez : git remote add origin https://...
+
+❌ Le site ne s'affiche pas
+   → Attendez 5-10 minutes
+   → Vérifiez que le dépôt est PUBLIC
+   → Videz le cache : Ctrl+F5
+
+❌ Erreur d'authentification
+   → Créez un Personal Access Token (voir section ci-dessus)
+   → Utilisez le token comme mot de passe
+
+❌ Le QR code ne fonctionne pas
+   → Testez l'URL dans un navigateur
+   → Augmentez la taille du QR code (minimum 2x2 cm imprimé)
+   → Vérifiez le contraste
+
+
+═══════════════════════════════════════════════════════════════════
+   📞 RESSOURCES UTILES
+═══════════════════════════════════════════════════════════════════
+
+• Documentation GitHub Pages : https://docs.github.com/pages
+• Test de QR code : https://webqr.com
+• Vérification DNS : https://dnschecker.org
+• Générateur QR code : https://www.qr-code-generator.com
+
+
+═══════════════════════════════════════════════════════════════════
+
+Bonne chance pour votre campagne électorale ! 🎉
+
+Élections municipales : 15-22 Mars 2026
+Commune : Ferney-Voltaire (01210)
+Tête de liste : Christian Landreau
+
+═══════════════════════════════════════════════════════════════════
