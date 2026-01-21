@@ -112,7 +112,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 3rem var(--spacing-md);
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
@@ -146,6 +146,13 @@ a {
 
 .logo-center:hover {
     transform: translateX(-50%) translateY(-2px);
+}
+
+.logo-image {
+    height: 150px;
+    width: auto;
+    display: block;
+    transition: var(--transition-fast);
 }
 
 .logo {
@@ -727,9 +734,10 @@ a {
 .member-card {
     background: var(--bg-white);
     border-radius: 12px;
-    padding: var(--spacing-lg);
+    padding: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: var(--transition-normal);
+    overflow: hidden;
 }
 
 .member-card:hover {
@@ -742,8 +750,8 @@ a {
 }
 
 .photo-placeholder {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 350px;
     border-radius: 12px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     display: flex;
@@ -761,7 +769,7 @@ a {
 
 .initials {
     color: var(--bg-white);
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: bold;
 }
 
@@ -771,11 +779,13 @@ a {
 
 .member-info {
     flex: 1;
+    padding: 0.5rem;
 }
 
 .member-name {
     color: var(--primary-color);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
 }
 
 .member-role {
@@ -797,13 +807,19 @@ a {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-bottom: var(--spacing-lg);
 }
 
 .team-grid .member-card {
     text-align: center;
+}
+
+.team-grid .member-card .btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
 }
 
 .clickable-card {
@@ -1460,6 +1476,61 @@ a {
     position: relative;
     animation: slideUp 0.3s ease;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal content grande version pour les présentations */
+.modal-content-large {
+    background-color: var(--bg-white);
+    margin: auto;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+/* Photo duo (candidat + Christian Landreau) */
+.modal-duo-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.duo-photo-placeholder {
+    width: 100%;
+    max-width: 700px;
+    height: 450px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.initials-duo {
+    font-size: 8rem;
+    color: var(--bg-white);
+}
+
+.modal-caption {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.modal-description {
+    padding: 0 2rem;
+}
+
+.modal-footer-phrase {
+    border-top: 2px solid var(--primary-color);
+    margin-top: 2rem;
+    padding-top: 1rem;
 }
 
 @keyframes slideUp {

@@ -199,67 +199,113 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Christian Landreau",
             role: "Tête de liste",
             initials: "CL",
-            photo: "", // Photo à ajouter
-            bio: `
-                <p>Les informations détaillées sur Christian Landreau seront publiées prochainement.</p>
-                <p>Revenez bientôt pour découvrir le parcours, les engagements et la vision de notre tête de liste.</p>
-            `
+            soloPhoto: "", // Photo solo de Christian Landreau à ajouter
+            description: "Les informations détaillées sur Christian Landreau seront publiées prochainement. Revenez bientôt pour découvrir le parcours, les engagements et la vision de notre tête de liste."
         },
         member2: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 2",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "", // Photo duo avec Christian Landreau à ajouter
+            description: "Informations à venir prochainement."
         },
         member3: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 3",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         },
         member4: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 4",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         },
         member5: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 5",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         },
         member6: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 6",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         },
         member7: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 7",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         },
         member8: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 8",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         },
         member9: {
-            name: "Prénom NOM",
+            name: "Prochainement",
             role: "Position 9",
-            initials: "PN",
-            photo: "",
-            bio: `<p>Informations à venir prochainement.</p>`
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member10: {
+            name: "Prochainement",
+            role: "Position 10",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member11: {
+            name: "Prochainement",
+            role: "Position 11",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member12: {
+            name: "Prochainement",
+            role: "Position 12",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member13: {
+            name: "Prochainement",
+            role: "Position 13",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member14: {
+            name: "Prochainement",
+            role: "Position 14",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member15: {
+            name: "Prochainement",
+            role: "Position 15",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
+        },
+        member16: {
+            name: "Prochainement",
+            role: "Position 16",
+            initials: "👤",
+            duoPhoto: "",
+            description: "Informations à venir prochainement."
         }
     };
 });
@@ -274,27 +320,65 @@ function openMemberModal(memberId) {
         return;
     }
     
-    // Populate modal with member data
-    document.getElementById('modalName').textContent = member.name;
-    document.getElementById('modalRole').textContent = member.role;
-    document.getElementById('modalBio').innerHTML = member.bio;
-    
-    // Handle photo or placeholder
-    const modalPhoto = document.getElementById('modalPhoto');
-    const modalPhotoPlaceholder = document.getElementById('modalPhotoPlaceholder');
-    const modalInitials = document.getElementById('modalInitials');
-    
-    if (member.photo && member.photo !== "") {
-        // Show real photo
-        modalPhoto.src = member.photo;
-        modalPhoto.alt = member.name;
-        modalPhoto.style.display = 'block';
-        modalPhotoPlaceholder.style.display = 'none';
+    // Gestion spéciale pour Christian Landreau (member1) - photo solo au lieu de duo
+    if (memberId === 'member1') {
+        // Pour la tête de liste, affichage avec photo solo
+        document.getElementById('modalCaption').textContent = member.name;
     } else {
-        // Show placeholder with initials
-        modalInitials.textContent = member.initials || 'PN';
-        modalPhoto.style.display = 'none';
-        modalPhotoPlaceholder.style.display = 'flex';
+        // Pour les autres candidats, affichage avec Christian Landreau
+        document.getElementById('modalCaption').textContent = `${member.name} avec Christian Landreau`;
+    }
+    
+    // Description courte (placeholder pour l'instant)
+    const description = member.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.";
+    document.getElementById('modalDescription').textContent = description;
+    
+    // Handle photo duo or placeholder
+    const modalDuoPhoto = document.getElementById('modalDuoPhoto');
+    const modalDuoPhotoPlaceholder = document.getElementById('modalDuoPhotoPlaceholder');
+    const modalDuoPhotoContainer = document.querySelector('.modal-duo-photo');
+    const initialsElement = modalDuoPhotoPlaceholder.querySelector('.initials-duo');
+    
+    if (memberId === 'member1') {
+        // Afficher la photo solo pour Christian Landreau
+        modalDuoPhotoContainer.style.display = 'flex';
+        
+        if (member.soloPhoto && member.soloPhoto !== "") {
+            // Show real solo photo
+            modalDuoPhoto.src = member.soloPhoto;
+            modalDuoPhoto.alt = member.name;
+            modalDuoPhoto.style.display = 'block';
+            modalDuoPhoto.style.width = '100%';
+            modalDuoPhoto.style.maxWidth = '700px';
+            modalDuoPhoto.style.height = 'auto';
+            modalDuoPhoto.style.borderRadius = '12px';
+            modalDuoPhotoPlaceholder.style.display = 'none';
+        } else {
+            // Show placeholder with single person icon
+            initialsElement.textContent = '👤';
+            modalDuoPhoto.style.display = 'none';
+            modalDuoPhotoPlaceholder.style.display = 'flex';
+        }
+    } else {
+        // Afficher la section photo pour les autres candidats
+        modalDuoPhotoContainer.style.display = 'flex';
+        
+        if (member.duoPhoto && member.duoPhoto !== "") {
+            // Show real duo photo
+            modalDuoPhoto.src = member.duoPhoto;
+            modalDuoPhoto.alt = `${member.name} avec Christian Landreau`;
+            modalDuoPhoto.style.display = 'block';
+            modalDuoPhoto.style.width = '100%';
+            modalDuoPhoto.style.maxWidth = '700px';
+            modalDuoPhoto.style.height = 'auto';
+            modalDuoPhoto.style.borderRadius = '12px';
+            modalDuoPhotoPlaceholder.style.display = 'none';
+        } else {
+            // Show placeholder with duo icon
+            initialsElement.textContent = '👥';
+            modalDuoPhoto.style.display = 'none';
+            modalDuoPhotoPlaceholder.style.display = 'flex';
+        }
     }
     
     // Show modal
