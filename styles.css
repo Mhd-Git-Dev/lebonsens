@@ -112,7 +112,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem var(--spacing-md);
+    padding: 8rem var(--spacing-md);
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
@@ -149,7 +149,7 @@ a {
 }
 
 .logo-image {
-    height: 150px;
+    height: 300px;
     width: auto;
     display: block;
     transition: var(--transition-fast);
