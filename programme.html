@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Programme - Le Bon Sens</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <header class="header">
@@ -14,19 +16,19 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="programme.html" class="active">Notre Programme</a></li>
             </ul>
-            
+
             <a href="index.html" class="logo-center">
                 <div class="logo-text">
                     <span class="logo-city">Ferney-Voltaire</span>
                     <span class="logo-slogan">Le Bon Sens</span>
                 </div>
             </a>
-            
+
             <ul class="nav-menu-right">
                 <li><a href="liste.html">La Liste</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
-            
+
             <button class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
@@ -35,10 +37,99 @@
         </nav>
     </header>
 
-    <!-- Coming Soon Section -->
-    <section class="coming-soon-section">
+    <!-- Programme Section with Flyers -->
+    <section class="programme-flyers-section" style="padding: 4rem 2rem; background: #f8f9fa;">
         <div class="container">
-            <h1 class="coming-soon-title">Tout prochainement</h1>
+            <h1 style="text-align: center; color: var(--primary-color); margin-bottom: 3rem; font-size: 2.5rem;">Notre
+                Programme</h1>
+
+            <!-- Flyer 3 -->
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.6rem;">Flyer
+                3</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem;">
+                <!-- Flyer 3 Recto -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer03_Recto.jpg" alt="Flyer 3 - Recto"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- Flyer 3 Verso -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer03_Verso.jpg" alt="Flyer 3 - Verso"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <!-- Flyer 4 -->
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.6rem;">Flyer
+                4</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem;">
+                <!-- Flyer 4 Page 1 -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer4/Flyer04_Landreau_page-0001.jpg" alt="Flyer 4 - Recto"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- Flyer 4 Page 2 -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer4/Flyer04_Landreau_page-0002.jpg" alt="Flyer 4 - Verso"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <!-- Flyer 5 -->
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.6rem;">Flyer
+                5</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem;">
+                <!-- Flyer 5 Page 1 -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer05_Landreau/Flyer05_Landreau_page-0001.jpg" alt="Flyer 5 - Recto"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- Flyer 5 Page 2 -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer05_Landreau/Flyer05_Landreau_page-0002.jpg" alt="Flyer 5 - Verso"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <!-- Flyer 6 -->
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.6rem;">Flyer
+                6</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem;">
+                <!-- Flyer 6 Page 1 -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer06-Tram/Flyer06-Tram_page-0001.jpg" alt="Flyer 6 - Recto"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- Flyer 6 Page 2 -->
+                <div
+                    style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <img src="imgs/Flyer06-Tram/Flyer06-Tram_page-0002.jpg" alt="Flyer 6 - Verso"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <!-- Coming Soon Message -->
+            <div
+                style="text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Tout prochainement</h2>
+                <p style="color: var(--text-light); font-size: 1.1rem; margin: 0;">D'autres documents et détails sur
+                    notre programme seront publiés très bientôt.</p>
+            </div>
         </div>
     </section>
 
@@ -59,12 +150,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Le Bon Sens. Tous droits réservés. | <a href="politique-confidentialite.html" style="color: inherit; text-decoration: underline;">Politique de confidentialité (RGPD)</a></p>
+                <p>&copy; 2025 Le Bon Sens. Tous droits réservés. | <a href="politique-confidentialite.html"
+                        style="color: inherit; text-decoration: underline;">Politique de confidentialité (RGPD)</a></p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
